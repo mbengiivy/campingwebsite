@@ -1,0 +1,217 @@
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth; }
+    @media only screen and (max-width: 75em) {
+      html {
+        font-size: 69%; } }
+    @media only screen and (max-width: 56.25em) {
+      html {
+        font-size: 66%; } }
+    @media only screen and (min-width: 112.5em) {
+      html {
+        font-size: 75%; } }
+  
+
+body{
+    background-color: white;
+    font-family: "Ink Free", Times, serif;
+    box-sizing: border-box;
+    position: relative;
+    line-height: 0.9;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin:0;
+    padding:0;
+    width:fit-content;
+
+    
+}
+
+    input:focus,
+    button:focus,
+    a:focus,
+    textarea:focus 
+    {
+    outline: none;
+    }
+
+
+    h2{
+        margin:0;
+        font-size:40px;
+        position: relative;
+        left: 100px;
+        align-items: center;
+    }
+
+#header{
+    margin:auto;
+    width:100vh;
+    display:flex;
+}
+
+ul{
+    display:inline-block;
+    @media only screen and (max-width:37.5em) {
+        ul{
+            display:none;
+        }        
+    }
+}
+.nav-links{
+    position: absolute;
+    z-index:2;
+}
+.header-link{
+    background-color: burlywood;
+    width:150px;
+    font-size:20px;
+    padding: 2.2rem 3rem;
+    display:flex;
+    color:black;
+    text-decoration: none;
+    text-transform: uppercase;
+     letter-spacing: .2px;
+    font-weight: 700;
+    transition: color .3sec;
+    align-items: right;
+    margin:5px;
+    border-radius: 10px;
+
+    
+}
+    .header-link:hover{
+        color:aliceblue;
+        @media only screen and (max-width:56.5em) {
+            .header-link{
+                padding: 3rem 1,8rem;
+                font-size: 1.5rem;
+            }            
+        }
+    }
+li{
+    list-style: none;
+}
+
+
+  .parta{
+    width:364px;
+    height:500px;
+    border-radius:10px;
+    background-color: rgb(253, 253, 253);
+    position: absolute;
+    top:25%;
+    left:50%;
+    overflow:hidden;
+  }
+
+.slideshow{
+    width:200%;
+    height:400px;
+    display:flex;
+    
+}
+.slideshow img{
+    width:360;
+    height:350;
+}
+ 
+.camping-image1{
+    width:200%;
+    transition:2s;
+}
+.camping-images{
+    width:200%;
+    transition:2s;
+    margin:2px;
+
+}  
+ .slideshow input{
+    display:none;
+ }
+
+  .navigation-manual{
+    position:absolute;
+    width:100%;
+    margin-top:-40px;
+    display:flex;
+    justify-content:center;
+ }
+ .manualbtn{
+    border: 2px solid burlywood;
+    padding:5px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:2sec;
+ }
+ .manualbtn:not(:last-child){
+    margin-right:40px;
+ }
+
+ .manualbt:hover{
+    background-color: rgb(0, 0, 0);
+ }
+
+ #rdio1:checked ~ .camping-image1{
+    margin-left:3;
+ }
+ #rdio2:checked ~ .camping-image1{
+    margin-left:-50%;
+ }
+ #rdio3:checked ~ .camping-image1{
+    margin-left:-100%;
+ }
+ #rdio4:checked ~ .camping-image1{
+    margin-left:-305%;
+ }  
+ /*Steps to making a slideshow 
+ 1. Place the slider(parta) container enough size to fit the width you desire the slideshow to be and height to fit the radiobuttons
+ 2. (Slideshow) width should be accurate for the sliding of the four images(or more)
+ 3. Ensure the width of the images fits correctly within the size of the slider-it must match with the slideshow width
+ 4. Ensure all images are of the same size so that they fit perfectly in the slideshow
+ 5. Sync the margin left angles with the width of your photos */
+
+ /*MANUAL SLIDE COMPLETE*/
+
+
+ .navigation-auto{
+    position:absolute;
+    display:flex;
+    width: 364px;
+    justify-content: center;
+    margin-top:360px; 
+    
+ }
+
+ .navigation-auto div{
+    border:2px solid rgb(0, 0, 0);
+    padding:5px;
+    border-radius: 10px;
+    transition:1s;
+
+ }
+
+ .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+ }
+
+ #rdio1:checked ~ .navigation-auto .auto-btn1{
+    background: burlywood;
+    
+}
+ #rdio1:checked ~ .navigation-auto .auto-btn2{
+    background: burlywood;
+    margin-left: -50%;
+}
+ #rdio1:checked ~ .navigation-auto .auto-btn3{
+    background: burlywood;
+    margin-left: -100%;
+}
+ #rdio1:checked ~ .navigation-auto .auto-btn4{
+    background: burlywood;
+    margin-left: -1500%;
+}
